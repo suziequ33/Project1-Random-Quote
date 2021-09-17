@@ -17,11 +17,12 @@ const quote =[
   ["Dobby had heard of your greatness, sir, but of your goodness, Dobby never knew.", "-Dobby","Harry Potter and the Chamber of Secrets."]
   ["Do not pity the dead, Harry. Pity the living . And above all, pity those who live without love.","-Albus Dumbledore","Harry Potter and Deathly Hallows."]
   ["We've all got both light and dark inside us. What matters is the part we choose to act on...that's who we really are.", "-Sirius Black", "Harry Potter and the Order of the Phoenix."]
-  ["When in doubt, go to the library.","-Ron Weasley","Harry Potter and the Chamber of the Secrets."]
+  ["When in doubt, go to the library.","-Ron Weasley","Harry Potter and the Chamber of the Secrets.", "Chapter 14"]
   ["Don't let the muggles get you down.", "-Ron Weasley", "Harry Potter and the Prisoner of Azkaban.", "Chapter 1"]
   ["Until the very end.", "-James Potter", "Harry Potter and the Deathly Hallows."]
-
-
+  ["Just because you have the emotional range of a teaspoon doesn't mean we all have.", "-Hermione Granger", "Harry Potter and the Order of the Phoenix", "Chapter 21"]
+  ["You sort of start thinking anything's possible if you've got enough nerve.", "-Ginny Weasley", "Harry Potter and the Order of the Phoenix."]
+  ["I love magic.", "-Harry Potter", " Harry Potter and the Goblet of Fire."]
 ]
 
 
