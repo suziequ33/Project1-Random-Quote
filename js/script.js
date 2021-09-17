@@ -10,7 +10,19 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
+const quote =[
+  ["It does not do to dwell on dreams and forget to live.","-Albus Dumbledore", "Harry Potter and the Sorceret's Stone", "Chapter 12"]
+  ["The ones that love us never really leave us. You can always find them in here.", "-Sirius Black","Harry Potter and the Prisoner of Azkaban."]
+  ["Things we lose have a way of coming back to us int the end, if not always in the way we expect.", "-Luna Lovegood", "Harry Potter and the Order of the Phoenix."]
+  ["Dobby had heard of your greatness, sir, but of your goodness, Dobby never knew.", "-Dobby","Harry Potter and the Chamber of Secrets."]
+  ["Do not pity the dead, Harry. Pity the living . And above all, pity those who live without love.","-Albus Dumbledore","Harry Potter and Deathly Hallows."]
+  ["We've all got both light and dark inside us. What matters is the part we choose to act on...that's who we really are.", "-Sirius Black", "Harry Potter and the Order of the Phoenix."]
+  ["When in doubt, go to the library.","-Ron Weasley","Harry Potter and the Chamber of the Secrets."]
+  ["Don't let the muggles get you down.", "-Ron Weasley", "Harry Potter and the Prisoner of Azkaban.", "Chapter 1"]
+  ["Until the very end.", "-James Potter", "Harry Potter and the Deathly Hallows."]
 
+
+]
 
 
 /***
