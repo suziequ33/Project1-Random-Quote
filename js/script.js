@@ -28,18 +28,30 @@ const quotes =[
  * `getRandomQuote` function
 ***/
 function getRandomQuote(quotes) {
-  const randomNumber= Math.floor(Math.random(quotes)*12 +1)
-
+  const randomNumber = Math.floor(Math.random() * 12) +1;
+  return randomNumber;
 }
 /***
  * `printQuote` function
 ***/
-function 
-
+function printQuote() {
+  const storeRandomQ =
+  html =`
+  <p class="quote">${quotes.quote}</p>
+  <p class="source">${quotes.source}
+  if (quote= citation){
+    <span class="citation">${quotes.citation}</span>;
+  }
+  if (quote="chapter"){
+    <span class="chapter">${quotes.chapter}</span>;
+  }
+  </p>
+  `;
+}
 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('quote-box').innerHTML= quotes;
