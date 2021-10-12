@@ -13,7 +13,7 @@ project 1 - A Random Quote Generator
 const quotes =[
   {quote:"It does not do to dwell on dreams and forget to live.", source:"-Albus Dumbledore", citation:"Harry Potter and the Sorceret's Stone", chapter:"Chapter 12"},
   {quote:"The ones that love us never really leave us. You can always find them in here.", source:"-Sirius Black", citation:"Harry Potter and the Prisoner of Azkaban."},
-  {quote:"Things we lose have a way of coming back to us int the end, if not always in the way we expect.", source: "-Luna Lovegood", citation:"Harry Potter and the Order of the Phoenix."},
+  {quote:"Things we lose have a way of coming back to us in the end, if not always in the way we expect.", source: "-Luna Lovegood", citation:"Harry Potter and the Order of the Phoenix."},
   {quote:"Dobby had heard of your greatness, sir, but of your goodness, Dobby never knew.",source:"-Dobby", citation:"Harry Potter and the Chamber of Secrets."},
   {quote:"Do not pity the dead, Harry. Pity the living . And above all, pity those who live without love.", source:"-Albus Dumbledore", citation:"Harry Potter and Deathly Hallows."},
   {quote:"We've all got both light and dark inside us. What matters is the part we choose to act on...that's who we really are.", source:"-Sirius Black",citation:"Harry Potter and the Order of the Phoenix."},
@@ -27,31 +27,31 @@ const quotes =[
 /***
  * `getRandomQuote` function
 ***/
-function getRandomQuote(quotes) {
-  const randomNumber = Math.floor(Math.random() * 12) +1;
-  return randomNumber;
+function getRandomQuote() {
+  const randomNumber = Math.floor(Math.random() * (quotes.length));
+  return quotes[randomNumber];
 }
 /***
  * `printQuote` function
 ***/
 function printQuote() {
-  const storeRandomQ =
-  html =`
-  <p class="quote">${quotes.quote}</p>
-  <p class="source">${quotes.source}
-  if (quote= citation){
-    <span class="citation">${quotes.citation}</span>;
+  let storeRandomQ = getRandomQuote();
+ let html =`
+  <p class="quote">${storeRandomQ.quote}</p>
+  <p class="source">${storeRandomQ.source}`;
+  if (storeRandomQ["citation"]){
+    html += `<span class="citation"> ${storeRandomQ["citation"]}</span>`;
   }
-  if (quote="chapter"){
-    <span class="chapter">${quotes.chapter}</span>;
+  if (storeRandomQ["chapter"]){
+    html += `<span class="chapter"> ${storeRandomQ["chapter"]}</span>`;
   }
-  </p>
-  `;
-}
+  html += '</p>';
 
+document.getElementById("quote-box").innerHTML = html;
+}
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('quote-box').innerHTML= quotes;
+document.getElementById('load-quote').addEventListener("click", printQuote, false) ;
