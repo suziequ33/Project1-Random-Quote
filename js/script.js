@@ -10,6 +10,9 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
+/**  array of objects quotes: Harry Pottr quotes with a source, citation, and chapter. 
+ **/
+
 const quotes =[
   {quote:"It does not do to dwell on dreams and forget to live.", source:"-Albus Dumbledore", citation:"Harry Potter and the Sorceret's Stone", chapter:"Chapter 12"},
   {quote:"The ones that love us never really leave us. You can always find them in here.", source:"-Sirius Black", citation:"Harry Potter and the Prisoner of Azkaban."},
@@ -27,13 +30,24 @@ const quotes =[
 /***
  * `getRandomQuote` function
 ***/
+/**getRandomQuote function to make the quotes random. Used Math.floor(Math.random())
+ * also used (quotes.length) for the length of the array instead of *12 +1)
+ * returns quotes from randomNumber
+ */
 function getRandomQuote() {
   const randomNumber = Math.floor(Math.random() * (quotes.length));
   return quotes[randomNumber];
 }
+
 /***
  * `printQuote` function
 ***/
+/** printQuote function used <p></p> tags for the quote and source but had to add if statements
+ * for the citation and the chaper in <span class></span class>.
+ *  storeRandomQ refers to the getRandomQuote fot the results.
+ *  Used template literals for a more of a concatenated code.
+ * html += (adding the quote, source to citation and chapeter) add html to the closeing </p> tag.
+ */
 function printQuote() {
   let storeRandomQ = getRandomQuote();
  let html =`
@@ -49,9 +63,14 @@ function printQuote() {
 
 document.getElementById("quote-box").innerHTML = html;
 }
+/**document.getElementById links innerHTML and the html string to index.html 
+ * and displays it ong the site.
+ * = html is my code to the function printQuote */ 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false) ;
+
+/**document.getElementById add the button to the site and make it pring the quotes */
