@@ -6,7 +6,26 @@ project 1 - A Random Quote Generator
 // For assistance: 
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
+/**I  got the colors from the website html-color.codes
+ * the colors are red, green, blue and yellow for the houses in Harry Potter. 
+ **/
 
+const colors =[
+  {houseColors: "#ac100a"},   //gryffindor red
+  {houseColors: "#0a7521"},   //slytherin  green
+  {houseColors: "#15027e"},   //ravenclaw  blue
+  {houseColors: "#eef10b"},   //hufflpuff  yellow
+];
+
+/** I used the same formula of the random number method for the colors.
+ * 
+ */
+function getRandomColor(){
+  let randomColor = Math.floor(Math.random() * colors.length);
+  return colors[randomColor];
+}
+
+  
 /*** 
  * `quotes` array 
 ***/
@@ -48,7 +67,9 @@ function getRandomQuote() {
  *  Used template literals for a more of a concatenated code.
  * html += (adding the quote, source to citation and chapeter) add html to the closeing </p> tag.
  */
+/** added Harry potter colors to the function. added a variable for the colors and referred it to getRandomColor */
 function printQuote() {
+  let storeColors = getRandomColor();
   let storeRandomQ = getRandomQuote();
  let html =`
   <p class="quote">${storeRandomQ.quote}</p>
@@ -62,7 +83,9 @@ function printQuote() {
   html += '</p>';
 
 document.getElementById("quote-box").innerHTML = html;
+document.body.style.background = storeColors.houseColors;
 }
+/**document.body links the background to the index.html.and the style.css togethre.**/
 /**document.getElementById links innerHTML and the html string to index.html 
  * and displays it ong the site.
  * = html is my code to the function printQuote */ 
