@@ -64,6 +64,24 @@ function getRandomQuote() {
   const randomNumber = Math.floor(Math.random() * (quotes.length));
   return quotes[randomNumber];
 }
+let time= setInterval(myTimer, 5000);
+  
+function myTimer() {
+  printQuote();
+};
+clearInterval(interval);
+
+/** I submitted my project once already and it came back saying i needed to add a timer. I wasnt going to add a timer
+ * because i just wanted to submit my project. But here we are. I found the code for the setInterval at
+ * stockoverflow.com, and w3schools.com i tried a few other codes and it didnt work out as well.
+ * i got stuck with forgetting the () marks after the printQuote().
+ * You know at first i was not happy to do this but its cool when you do finally get it to work.
+ * You set a variable and = to setInterval. then use a key for the fucntion and set a time in milliseconds for the time
+ * function myTime and method to execute is printQuote()
+ * you have to clear the interval after each time it runs. 
+ */
+
+
 
 /***
  * `printQuote` function
