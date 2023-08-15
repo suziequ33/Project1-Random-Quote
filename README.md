@@ -1,2 +1,2 @@
-# Project1-Random Qoute
+# Project1-Random Quote
  The first project- HP Qoutes
