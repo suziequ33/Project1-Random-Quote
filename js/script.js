@@ -64,12 +64,13 @@ function getRandomQuote() {
   const randomNumber = Math.floor(Math.random() * (quotes.length));
   return quotes[randomNumber];
 }
-let time= setInterval(myTimer, 5000);
+//let time= setInterval(myTimer, 5000);
   
-function myTimer() {
-  printQuote();
+function printQuote() {
+  const quote = getRandomQuote();
 };
-clearInterval(interval);
+let quoteInterval = setInterval(printQuote, 5000);
+clearInterval(quoteInterval);
 
 /** I submitted my project once already and it came back saying i needed to add a timer. I wasnt going to add a timer
  * because i just wanted to submit my project. But here we are. I found the code for the setInterval at
